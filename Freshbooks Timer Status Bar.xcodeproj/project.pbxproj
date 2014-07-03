@@ -1,0 +1,481 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		07EA9FC71965C71900F8143C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07EA9FC61965C71900F8143C /* Cocoa.framework */; };
+		07EA9FD11965C71900F8143C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 07EA9FCF1965C71900F8143C /* InfoPlist.strings */; };
+		07EA9FD31965C71900F8143C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EA9FD21965C71900F8143C /* main.m */; };
+		07EA9FD71965C71900F8143C /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 07EA9FD51965C71900F8143C /* Credits.rtf */; };
+		07EA9FDA1965C71900F8143C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EA9FD91965C71900F8143C /* AppDelegate.m */; };
+		07EA9FDD1965C71900F8143C /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07EA9FDB1965C71900F8143C /* MainMenu.xib */; };
+		07EA9FDF1965C71900F8143C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07EA9FDE1965C71900F8143C /* Images.xcassets */; };
+		07EA9FE61965C71900F8143C /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07EA9FE51965C71900F8143C /* XCTest.framework */; };
+		07EA9FE71965C71900F8143C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07EA9FC61965C71900F8143C /* Cocoa.framework */; };
+		07EA9FEF1965C71900F8143C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 07EA9FED1965C71900F8143C /* InfoPlist.strings */; };
+		07EA9FF11965C71900F8143C /* Freshbooks_Timer_Status_BarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EA9FF01965C71900F8143C /* Freshbooks_Timer_Status_BarTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		07EA9FE81965C71900F8143C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 07EA9FBB1965C71900F8143C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 07EA9FC21965C71900F8143C;
+			remoteInfo = "Freshbooks Timer Status Bar";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		07EA9FC31965C71900F8143C /* Freshbooks Timer Status Bar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Freshbooks Timer Status Bar.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		07EA9FC61965C71900F8143C /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		07EA9FC91965C71900F8143C /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		07EA9FCA1965C71900F8143C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		07EA9FCB1965C71900F8143C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		07EA9FCE1965C71900F8143C /* Freshbooks Timer Status Bar-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Freshbooks Timer Status Bar-Info.plist"; sourceTree = "<group>"; };
+		07EA9FD01965C71900F8143C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		07EA9FD21965C71900F8143C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		07EA9FD41965C71900F8143C /* Freshbooks Timer Status Bar-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Freshbooks Timer Status Bar-Prefix.pch"; sourceTree = "<group>"; };
+		07EA9FD61965C71900F8143C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		07EA9FD81965C71900F8143C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		07EA9FD91965C71900F8143C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		07EA9FDC1965C71900F8143C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		07EA9FDE1965C71900F8143C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		07EA9FE41965C71900F8143C /* Freshbooks Timer Status BarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Freshbooks Timer Status BarTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		07EA9FE51965C71900F8143C /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		07EA9FEC1965C71900F8143C /* Freshbooks Timer Status BarTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Freshbooks Timer Status BarTests-Info.plist"; sourceTree = "<group>"; };
+		07EA9FEE1965C71900F8143C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		07EA9FF01965C71900F8143C /* Freshbooks_Timer_Status_BarTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Freshbooks_Timer_Status_BarTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		07EA9FC01965C71900F8143C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07EA9FC71965C71900F8143C /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07EA9FE11965C71900F8143C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07EA9FE71965C71900F8143C /* Cocoa.framework in Frameworks */,
+				07EA9FE61965C71900F8143C /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		07EA9FBA1965C71900F8143C = {
+			isa = PBXGroup;
+			children = (
+				07EA9FCC1965C71900F8143C /* Freshbooks Timer Status Bar */,
+				07EA9FEA1965C71900F8143C /* Freshbooks Timer Status BarTests */,
+				07EA9FC51965C71900F8143C /* Frameworks */,
+				07EA9FC41965C71900F8143C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		07EA9FC41965C71900F8143C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				07EA9FC31965C71900F8143C /* Freshbooks Timer Status Bar.app */,
+				07EA9FE41965C71900F8143C /* Freshbooks Timer Status BarTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		07EA9FC51965C71900F8143C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				07EA9FC61965C71900F8143C /* Cocoa.framework */,
+				07EA9FE51965C71900F8143C /* XCTest.framework */,
+				07EA9FC81965C71900F8143C /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		07EA9FC81965C71900F8143C /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				07EA9FC91965C71900F8143C /* AppKit.framework */,
+				07EA9FCA1965C71900F8143C /* CoreData.framework */,
+				07EA9FCB1965C71900F8143C /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		07EA9FCC1965C71900F8143C /* Freshbooks Timer Status Bar */ = {
+			isa = PBXGroup;
+			children = (
+				07EA9FD81965C71900F8143C /* AppDelegate.h */,
+				07EA9FD91965C71900F8143C /* AppDelegate.m */,
+				07EA9FDB1965C71900F8143C /* MainMenu.xib */,
+				07EA9FDE1965C71900F8143C /* Images.xcassets */,
+				07EA9FCD1965C71900F8143C /* Supporting Files */,
+			);
+			path = "Freshbooks Timer Status Bar";
+			sourceTree = "<group>";
+		};
+		07EA9FCD1965C71900F8143C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				07EA9FCE1965C71900F8143C /* Freshbooks Timer Status Bar-Info.plist */,
+				07EA9FCF1965C71900F8143C /* InfoPlist.strings */,
+				07EA9FD21965C71900F8143C /* main.m */,
+				07EA9FD41965C71900F8143C /* Freshbooks Timer Status Bar-Prefix.pch */,
+				07EA9FD51965C71900F8143C /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		07EA9FEA1965C71900F8143C /* Freshbooks Timer Status BarTests */ = {
+			isa = PBXGroup;
+			children = (
+				07EA9FF01965C71900F8143C /* Freshbooks_Timer_Status_BarTests.m */,
+				07EA9FEB1965C71900F8143C /* Supporting Files */,
+			);
+			path = "Freshbooks Timer Status BarTests";
+			sourceTree = "<group>";
+		};
+		07EA9FEB1965C71900F8143C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				07EA9FEC1965C71900F8143C /* Freshbooks Timer Status BarTests-Info.plist */,
+				07EA9FED1965C71900F8143C /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		07EA9FC21965C71900F8143C /* Freshbooks Timer Status Bar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07EA9FF41965C71900F8143C /* Build configuration list for PBXNativeTarget "Freshbooks Timer Status Bar" */;
+			buildPhases = (
+				07EA9FBF1965C71900F8143C /* Sources */,
+				07EA9FC01965C71900F8143C /* Frameworks */,
+				07EA9FC11965C71900F8143C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Freshbooks Timer Status Bar";
+			productName = "Freshbooks Timer Status Bar";
+			productReference = 07EA9FC31965C71900F8143C /* Freshbooks Timer Status Bar.app */;
+			productType = "com.apple.product-type.application";
+		};
+		07EA9FE31965C71900F8143C /* Freshbooks Timer Status BarTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07EA9FF71965C71900F8143C /* Build configuration list for PBXNativeTarget "Freshbooks Timer Status BarTests" */;
+			buildPhases = (
+				07EA9FE01965C71900F8143C /* Sources */,
+				07EA9FE11965C71900F8143C /* Frameworks */,
+				07EA9FE21965C71900F8143C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				07EA9FE91965C71900F8143C /* PBXTargetDependency */,
+			);
+			name = "Freshbooks Timer Status BarTests";
+			productName = "Freshbooks Timer Status BarTests";
+			productReference = 07EA9FE41965C71900F8143C /* Freshbooks Timer Status BarTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		07EA9FBB1965C71900F8143C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = loslabs.io;
+				TargetAttributes = {
+					07EA9FE31965C71900F8143C = {
+						TestTargetID = 07EA9FC21965C71900F8143C;
+					};
+				};
+			};
+			buildConfigurationList = 07EA9FBE1965C71900F8143C /* Build configuration list for PBXProject "Freshbooks Timer Status Bar" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 07EA9FBA1965C71900F8143C;
+			productRefGroup = 07EA9FC41965C71900F8143C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				07EA9FC21965C71900F8143C /* Freshbooks Timer Status Bar */,
+				07EA9FE31965C71900F8143C /* Freshbooks Timer Status BarTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		07EA9FC11965C71900F8143C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07EA9FD11965C71900F8143C /* InfoPlist.strings in Resources */,
+				07EA9FDF1965C71900F8143C /* Images.xcassets in Resources */,
+				07EA9FD71965C71900F8143C /* Credits.rtf in Resources */,
+				07EA9FDD1965C71900F8143C /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07EA9FE21965C71900F8143C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07EA9FEF1965C71900F8143C /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		07EA9FBF1965C71900F8143C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07EA9FDA1965C71900F8143C /* AppDelegate.m in Sources */,
+				07EA9FD31965C71900F8143C /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07EA9FE01965C71900F8143C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07EA9FF11965C71900F8143C /* Freshbooks_Timer_Status_BarTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		07EA9FE91965C71900F8143C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 07EA9FC21965C71900F8143C /* Freshbooks Timer Status Bar */;
+			targetProxy = 07EA9FE81965C71900F8143C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		07EA9FCF1965C71900F8143C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				07EA9FD01965C71900F8143C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		07EA9FD51965C71900F8143C /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				07EA9FD61965C71900F8143C /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		07EA9FDB1965C71900F8143C /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				07EA9FDC1965C71900F8143C /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		07EA9FED1965C71900F8143C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				07EA9FEE1965C71900F8143C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		07EA9FF21965C71900F8143C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		07EA9FF31965C71900F8143C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		07EA9FF51965C71900F8143C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Freshbooks Timer Status Bar/Freshbooks Timer Status Bar-Prefix.pch";
+				INFOPLIST_FILE = "Freshbooks Timer Status Bar/Freshbooks Timer Status Bar-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		07EA9FF61965C71900F8143C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Freshbooks Timer Status Bar/Freshbooks Timer Status Bar-Prefix.pch";
+				INFOPLIST_FILE = "Freshbooks Timer Status Bar/Freshbooks Timer Status Bar-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		07EA9FF81965C71900F8143C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Freshbooks Timer Status Bar.app/Contents/MacOS/Freshbooks Timer Status Bar";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Freshbooks Timer Status Bar/Freshbooks Timer Status Bar-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Freshbooks Timer Status BarTests/Freshbooks Timer Status BarTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		07EA9FF91965C71900F8143C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Freshbooks Timer Status Bar.app/Contents/MacOS/Freshbooks Timer Status Bar";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Freshbooks Timer Status Bar/Freshbooks Timer Status Bar-Prefix.pch";
+				INFOPLIST_FILE = "Freshbooks Timer Status BarTests/Freshbooks Timer Status BarTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		07EA9FBE1965C71900F8143C /* Build configuration list for PBXProject "Freshbooks Timer Status Bar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07EA9FF21965C71900F8143C /* Debug */,
+				07EA9FF31965C71900F8143C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		07EA9FF41965C71900F8143C /* Build configuration list for PBXNativeTarget "Freshbooks Timer Status Bar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07EA9FF51965C71900F8143C /* Debug */,
+				07EA9FF61965C71900F8143C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		07EA9FF71965C71900F8143C /* Build configuration list for PBXNativeTarget "Freshbooks Timer Status BarTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07EA9FF81965C71900F8143C /* Debug */,
+				07EA9FF91965C71900F8143C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 07EA9FBB1965C71900F8143C /* Project object */;
+}
