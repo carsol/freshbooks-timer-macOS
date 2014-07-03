@@ -14,7 +14,7 @@
 {
     // Insert code here to initialize your application
     _statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
-    _statusItem.title = @"0";
+    _statusItem.title = @"00:00";
     
     NSImage *menuIcon = [NSImage imageNamed:@"Menu Icon"];
     NSImage *highlightIcon = [NSImage imageNamed:@"Menu Icon"]; // Yes, we're using the exact same image asset.
@@ -45,9 +45,20 @@
 //    NSNumber *startTime = [NSNumber numberWithFloat:([startTime floatValue] + [plusOne floatValue])];
     double value = [startTime doubleValue];
     startTime = [NSNumber numberWithDouble:value + 1.0];
-//    NSLog(number);
 
-    NSString *timeString = [startTime stringValue];
+    int inputSeconds = [startTime intValue];
+    int hours =  inputSeconds / 3600;
+    int minutes = ( inputSeconds - hours * 3600 ) / 60;
+    int seconds = inputSeconds - hours * 3600 - minutes * 60;
+    
+    NSString *timeString = [[NSString alloc] init];
+    
+    if (hours > 0) {
+        timeString = [NSString stringWithFormat:@"%.2d:%.2d:%.2d", hours, minutes, seconds];
+    }else{
+        timeString = [NSString stringWithFormat:@"%.2d:%.2d", minutes, seconds];
+    }
+
     
     self.statusItem.title = timeString;
 }
