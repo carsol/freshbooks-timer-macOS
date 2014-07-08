@@ -8,6 +8,9 @@
 
 #import <Cocoa/Cocoa.h>
 
+#import "AFOAuth1Client.h"
+#import "AFXMLRequestOperation.h"
+
 @interface AppDelegate : NSObject <NSApplicationDelegate> {
     NSNumber *startTime;
     NSNumber *endTime;

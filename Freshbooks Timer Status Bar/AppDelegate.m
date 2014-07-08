@@ -12,6 +12,9 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
+    [[NSAppleEventManager sharedAppleEventManager] setEventHandler:self andSelector:@selector(handleEvent:withReplyEvent:) forEventClass:kInternetEventClass andEventID:kAEGetURL];
+    LSSetDefaultHandlerForURLScheme((__bridge CFStringRef)@"FreshTimer", (__bridge CFStringRef)[[NSBundle mainBundle] bundleIdentifier]);
+    
     // Insert code here to initialize your application
     _statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
     _statusItem.title = @"00:00";
@@ -25,6 +28,30 @@
     [[self statusItem] setMenu:[self menu]];
     [[self statusItem] setHighlightMode:YES];
     
+    
+    AFOAuth1Client *freshClient = [[AFOAuth1Client alloc] initWithBaseURL:[NSURL URLWithString:@"https://sonatechinc.freshbooks.com/api/2.1/xml-in"] key:@"05eb3c88633c045f6b99e83683e957ab" secret:@"9FfxUctCWbLz7DUCxkD7xR56KBnNVSmkF"];
+    
+    [freshClient registerHTTPOperationClass:[AFXMLRequestOperation class]];
+    
+    
+    [freshClient authorizeUsingOAuthWithRequestTokenPath:@"/oauth/oauth_request.php" userAuthorizationPath:@"/oauth/oauth_authorize.php" callbackURL:[NSURL URLWithString:@"/sucess"] accessTokenPath:@"/oauth/oauth_access.php" accessMethod:@"POST" scope:nil success:^(AFOAuth1Token *accessToken, id responseObject) {
+
+        NSLog(@"success");
+        
+        
+    } failure:^(NSError *error) {
+        
+        NSLog(@"bad %@", error);
+    }];
+    
+}
+
+- (void)handleEvent:(NSAppleEventDescriptor *)event withReplyEvent:(NSAppleEventDescriptor *)replyEvent
+{
+    NSURL *url = [NSURL URLWithString:[[event paramDescriptorForKeyword:keyDirectObject] stringValue]];
+    NSDictionary *info = [NSDictionary dictionaryWithObject:url forKey:kAFApplicationLaunchOptionsURLKey];
+    NSNotification *notification = [NSNotification notificationWithName:kAFApplicationLaunchedWithURLNotification object:self userInfo:info];
+    [[NSNotificationCenter defaultCenter] postNotification:notification];
 }
 
 - (IBAction)menuAction:(id)sender {

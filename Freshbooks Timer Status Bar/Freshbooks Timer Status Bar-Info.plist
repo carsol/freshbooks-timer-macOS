@@ -30,6 +30,17 @@
 	<string>Copyright © 2014 loslabs.io. All rights reserved.</string>
 	<key>NSMainNibFile</key>
 	<string>MainMenu</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>FreshTimer</string>
+			</array>
+			<key>CFBundleURLName</key>
+			<string>co.sonatech.FreshTimer</string>
+		</dict>
+	</array>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
 </dict>

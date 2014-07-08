@@ -18,6 +18,7 @@
 		07EA9FE71965C71900F8143C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07EA9FC61965C71900F8143C /* Cocoa.framework */; };
 		07EA9FEF1965C71900F8143C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 07EA9FED1965C71900F8143C /* InfoPlist.strings */; };
 		07EA9FF11965C71900F8143C /* Freshbooks_Timer_Status_BarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EA9FF01965C71900F8143C /* Freshbooks_Timer_Status_BarTests.m */; };
+		39FE3CE259B54DD2AA160A11 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F338C90E20C489C95CD1796 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,8 @@
 		07EA9FEC1965C71900F8143C /* Freshbooks Timer Status BarTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Freshbooks Timer Status BarTests-Info.plist"; sourceTree = "<group>"; };
 		07EA9FEE1965C71900F8143C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		07EA9FF01965C71900F8143C /* Freshbooks_Timer_Status_BarTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Freshbooks_Timer_Status_BarTests.m; sourceTree = "<group>"; };
+		3020A4B93CE3477FB58C53D4 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		6F338C90E20C489C95CD1796 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07EA9FC71965C71900F8143C /* Cocoa.framework in Frameworks */,
+				39FE3CE259B54DD2AA160A11 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +84,7 @@
 				07EA9FEA1965C71900F8143C /* Freshbooks Timer Status BarTests */,
 				07EA9FC51965C71900F8143C /* Frameworks */,
 				07EA9FC41965C71900F8143C /* Products */,
+				3020A4B93CE3477FB58C53D4 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,6 +103,7 @@
 				07EA9FC61965C71900F8143C /* Cocoa.framework */,
 				07EA9FE51965C71900F8143C /* XCTest.framework */,
 				07EA9FC81965C71900F8143C /* Other Frameworks */,
+				6F338C90E20C489C95CD1796 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -161,9 +167,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 07EA9FF41965C71900F8143C /* Build configuration list for PBXNativeTarget "Freshbooks Timer Status Bar" */;
 			buildPhases = (
+				41F07A58A3B54B6E84E13A21 /* Check Pods Manifest.lock */,
 				07EA9FBF1965C71900F8143C /* Sources */,
 				07EA9FC01965C71900F8143C /* Frameworks */,
 				07EA9FC11965C71900F8143C /* Resources */,
+				B618B86531534F06A94E22F4 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -246,6 +254,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		41F07A58A3B54B6E84E13A21 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B618B86531534F06A94E22F4 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		07EA9FBF1965C71900F8143C /* Sources */ = {
@@ -383,12 +424,17 @@
 		};
 		07EA9FF51965C71900F8143C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3020A4B93CE3477FB58C53D4 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Freshbooks Timer Status Bar/Freshbooks Timer Status Bar-Prefix.pch";
 				INFOPLIST_FILE = "Freshbooks Timer Status Bar/Freshbooks Timer Status Bar-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Freshbooks_Timer_Status_Bar-dfdtswqidrlyrybigduhscfmckqt/Build/Products/Debug",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -396,12 +442,17 @@
 		};
 		07EA9FF61965C71900F8143C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3020A4B93CE3477FB58C53D4 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Freshbooks Timer Status Bar/Freshbooks Timer Status Bar-Prefix.pch";
 				INFOPLIST_FILE = "Freshbooks Timer Status Bar/Freshbooks Timer Status Bar-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Freshbooks_Timer_Status_Bar-dfdtswqidrlyrybigduhscfmckqt/Build/Products/Debug",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -466,6 +517,7 @@
 				07EA9FF61965C71900F8143C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		07EA9FF71965C71900F8143C /* Build configuration list for PBXNativeTarget "Freshbooks Timer Status BarTests" */ = {
 			isa = XCConfigurationList;
@@ -474,6 +526,7 @@
 				07EA9FF91965C71900F8143C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
