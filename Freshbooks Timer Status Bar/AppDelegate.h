@@ -7,15 +7,20 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import <WebKit/WebKit.h>
 
 @interface AppDelegate : NSObject <NSApplicationDelegate> {
     NSNumber *startTime;
     NSNumber *endTime;
     NSTimer *timer;
+    NSString *freshTimerString;
 }
 
 @property (readwrite, retain) IBOutlet NSMenu *menu;
 @property (readwrite, retain) IBOutlet NSStatusItem *statusItem;
+
+@property (assign) IBOutlet NSWindow *window;
+@property (strong, nonatomic) IBOutlet WebView *webView;
 
 - (IBAction)menuAction:(id)sender;
 - (IBAction)startTimer:(id)sender;

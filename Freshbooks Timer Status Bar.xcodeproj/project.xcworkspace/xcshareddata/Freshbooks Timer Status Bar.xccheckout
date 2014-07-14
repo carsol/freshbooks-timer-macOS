@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>97EEE3B3-695F-4E12-B29A-7C53AC83B1C3</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Freshbooks Timer Status Bar</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>F5A8BC83-9A54-4EE8-AAFF-E0A7B8BF97F1</key>
+		<string>https://bitbucket.org/carsol23/freshbooks-timer-status-bar.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Freshbooks Timer Status Bar.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>F5A8BC83-9A54-4EE8-AAFF-E0A7B8BF97F1</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://bitbucket.org/carsol23/freshbooks-timer-status-bar.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>F5A8BC83-9A54-4EE8-AAFF-E0A7B8BF97F1</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>F5A8BC83-9A54-4EE8-AAFF-E0A7B8BF97F1</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Freshbooks-Timer-Status-Bar</string>
+		</dict>
+	</array>
+</dict>
+</plist>
