@@ -14,6 +14,8 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     // Insert code here to initialize your application
+    self.webView.policyDelegate = self;
+    
     _statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
     _statusItem.title = @"00:00:00";
     
@@ -26,72 +28,26 @@
     [[self statusItem] setMenu:[self menu]];
     [[self statusItem] setHighlightMode:YES];
     
-    self.webView.policyDelegate = self;
-    
-    //    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"https://sonatechinc.freshbooks.com/internal/timesheet/timer"] cachePolicy:NSURLRequestReturnCacheDataElseLoad timeoutInterval:60];
-    
     
     self.bundlePath = [[NSBundle mainBundle]bundlePath]; //Path of your bundle
     self.path = [self.bundlePath stringByAppendingPathComponent:@"data.plist"];
+    NSLog(@"path: %@", self.path);
     self.fileManager = [NSFileManager defaultManager];
     
-    NSLog(@"path:::: %@", self.path);
-    
-    
-    if ([self.fileManager fileExistsAtPath: self.path])
-    {
+    if ([self.fileManager fileExistsAtPath: self.path]){
         self.userData = [[NSMutableDictionary alloc] initWithContentsOfFile: self.path];  // if file exist at path initialise your dictionary with its data
-        NSLog(@"userData:::: %@", self.userData);
-    }
-    else
-    {
+        [self.window makeKeyAndOrderFront:nil];
+        [self loadTimerInWebView];        
+        NSLog(@"if userData: %@", self.userData);
+    }else{
         // If the file doesn’t exist, create an empty dictionary
         self.userData = [[NSMutableDictionary alloc] init];
         [self openSetting:nil];
-//        [self.settingWindow makeKeyAndOrderFront:nil];
+        NSLog(@"else userData: %@", self.userData);
     }
     
-//    self.domainTextField.stringValue = self.getDomain;
-    NSLog(@"applicationDidFinishLaunching %@",self.userData);
-    
-//    [self saveDomain:@"sonatechinc"];
-    
-    
-    NSString *url = [NSString stringWithFormat:@"https://%@.freshbooks.com/internal/timesheet/timer", self.getDomain];
-    
-    
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
 
-	[self.webView.mainFrame loadRequest:request];
-
-    
-
-    
 }
-
-
-
-
-- (NSString *)getDomain {
-    NSMutableDictionary *savedData = [[NSMutableDictionary alloc] initWithContentsOfFile: self.path];
-    NSString * domainString = [savedData objectForKey:@"domain"];
-    NSLog(@"getDomain %@", domainString);
-    
-    return domainString;
-}
-
-
-- (void)saveDomain:(NSString *)domainString {
-
-    [self.userData setObject:domainString forKey:@"domain"];
-    [self.userData writeToFile:self.path atomically:YES];
-    
-    NSLog(@"saveDomain %@",self.userData);
-}
-
-
-
-
 
 // WebView
 -(void)webView:(WebView *)webView
@@ -117,7 +73,7 @@ decidePolicyForNavigationAction:(NSDictionary *)actionInformation request:(NSURL
 }
 
 -(void)webView:(WebView *)sender didFinishLoadForFrame:(WebFrame *)frame {
-//    NSLog(@"didFinishLoadForFrame");
+    NSLog(@"webView: didFinishLoadForFrame");
 
     NSString *url = [sender mainFrameURL];
     
@@ -127,16 +83,40 @@ decidePolicyForNavigationAction:(NSDictionary *)actionInformation request:(NSURL
         
         NSRunLoop *freshRunner = [NSRunLoop currentRunLoop];
         [freshRunner addTimer:freshTimer forMode:NSDefaultRunLoopMode];
-        //    NSLog(@"%@", outputString);
     }
 }
 
+- (void)loadTimerInWebView {
+    NSString *url = [NSString stringWithFormat:@"https://%@.freshbooks.com/internal/timesheet/timer", self.getDomain];
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
+	[self.webView.mainFrame loadRequest:request];
+}
+
+/* Data */
+- (NSString *)getDomain {
+    NSMutableDictionary *savedData = [[NSMutableDictionary alloc] initWithContentsOfFile: self.path];
+    NSString * domainString = [savedData objectForKey:@"domain"];
+    NSLog(@"getDomain %@", domainString);
+    
+    return domainString;
+}
+
+- (void)saveDomain:(NSString *)domainString {
+    [self.userData setObject:domainString forKey:@"domain"];
+    [self.userData writeToFile:self.path atomically:YES];
+    
+    NSLog(@"saveDomain %@",self.userData);
+}
+
+
+/* Helpers */
 - (void)updateStatusText:(NSString *)string {
     NSLog(@"updateStatusText %@", string);
     self.statusItem.title = string;
 }
 
 - (void)updateTimerFromWebView:(WebView *)sender {
+    NSLog(@"updateTimerFromWebView");
     DOMDocument *domDoc = [[self.webView mainFrame] DOMDocument];
     
     DOMHTMLElement* hours = (DOMHTMLElement *)[domDoc getElementById:@"timer-clock-hours"];
@@ -148,28 +128,23 @@ decidePolicyForNavigationAction:(NSDictionary *)actionInformation request:(NSURL
 }
 
 
+/* Menu */
 - (IBAction)menuAction:(id)sender {
     NSLog(@"menuAction:");
+    
     [self.window makeKeyAndOrderFront:nil];
-}
-
-- (IBAction)openSetting:(id)sender{
-    NSLog(@"openSetting:");
-    [self.settingWindow makeKeyAndOrderFront:nil];
-    self.domainTextField.stringValue = self.getDomain;
 }
 
 - (IBAction)startTimer:(id)sender {
     NSLog(@"Start!");
-
-    [self.webView stringByEvaluatingJavaScriptFromString:@"$(\"#timer-button\").click()"];
     
+    [self.webView stringByEvaluatingJavaScriptFromString:@"$(\"#timer-button\").click()"];
 }
 
 - (IBAction)stopTimer:(id)sender {
     NSLog(@"Stop!");
-    [self.webView stringByEvaluatingJavaScriptFromString:@"$(\"#timer-button\").click()"];
     
+    [self.webView stringByEvaluatingJavaScriptFromString:@"$(\"#timer-button\").click()"];
 }
 
 - (IBAction)exitApp:(id)sender {
@@ -177,6 +152,13 @@ decidePolicyForNavigationAction:(NSDictionary *)actionInformation request:(NSURL
     [NSApp terminate:self];
 }
 
+/* Settings Window */
+- (IBAction)openSetting:(id)sender{
+    NSLog(@"openSetting:");
+    
+    [self.settingWindow makeKeyAndOrderFront:nil];
+    self.domainTextField.stringValue = self.getDomain;
+}
 
 - (IBAction)saveSetting:(id)sender {
     NSLog(@"saveSetting %@", self.domainTextField.stringValue);
@@ -184,7 +166,7 @@ decidePolicyForNavigationAction:(NSDictionary *)actionInformation request:(NSURL
     [self.settingWindow orderOut:self];
     [self.window makeKeyAndOrderFront:nil];
     
-    
+
     NSString *url = [NSString stringWithFormat:@"https://%@.freshbooks.com/internal/timesheet/timer", self.getDomain];
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
 	[self.webView.mainFrame loadRequest:request];
