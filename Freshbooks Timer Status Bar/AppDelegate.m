@@ -29,7 +29,32 @@
     self.webView.policyDelegate = self;
     
     //    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"https://sonatechinc.freshbooks.com/internal/timesheet/timer"] cachePolicy:NSURLRequestReturnCacheDataElseLoad timeoutInterval:60];
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"https://sonatechinc.freshbooks.com/internal/timesheet/timer"]];
+    
+    
+    self.bundlePath = [[NSBundle mainBundle]bundlePath]; //Path of your bundle
+    self.path = [self.bundlePath stringByAppendingPathComponent:@"data.plist"];
+    self.fileManager = [NSFileManager defaultManager];
+    
+    
+    if ([self.fileManager fileExistsAtPath: self.path])
+    {
+        self.userData = [[NSMutableDictionary alloc] initWithContentsOfFile: self.path];  // if file exist at path initialise your dictionary with its data
+    }
+    else
+    {
+        // If the file doesn’t exist, create an empty dictionary
+        self.userData = [[NSMutableDictionary alloc] init];
+    }
+    
+    NSLog(@"applicationDidFinishLaunching %@",self.userData);
+    
+    [self saveDomain:@"sonatechinc"];
+    
+    
+    NSString *url = [NSString stringWithFormat:@"https://%@.freshbooks.com/internal/timesheet/timer", self.getDomain];
+    
+    
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
 
 	[self.webView.mainFrame loadRequest:request];
 
@@ -37,6 +62,30 @@
 
     
 }
+
+
+
+
+- (NSString *)getDomain {
+    NSMutableDictionary *savedData = [[NSMutableDictionary alloc] initWithContentsOfFile: self.path];
+    NSString * domainString = [savedData objectForKey:@"domain"];
+    NSLog(@"getDomain %@", domainString);
+    
+    return domainString;
+}
+
+
+- (void)saveDomain:(NSString *)domainString {
+
+    [self.userData setObject:domainString forKey:@"domain"];
+    [self.userData writeToFile:self.path atomically:YES];
+    
+    NSLog(@"saveDomain %@",self.userData);
+}
+
+
+
+
 
 // WebView
 -(void)webView:(WebView *)webView

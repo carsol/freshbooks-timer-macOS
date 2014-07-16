@@ -22,6 +22,15 @@
 @property (assign) IBOutlet NSWindow *window;
 @property (strong, nonatomic) IBOutlet WebView *webView;
 
+
+//file stuff
+@property (strong, nonatomic) NSString *bundlePath;
+@property (strong, nonatomic) NSString *path;
+@property (strong, nonatomic) NSFileManager *fileManager;
+@property (strong, nonatomic) NSMutableDictionary *userData;
+
+
+
 - (IBAction)menuAction:(id)sender;
 - (IBAction)startTimer:(id)sender;
 - (IBAction)stopTimer:(id)sender;
