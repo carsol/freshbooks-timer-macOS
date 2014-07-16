@@ -23,6 +23,11 @@
 @property (strong, nonatomic) IBOutlet WebView *webView;
 
 
+
+@property (unsafe_unretained) IBOutlet NSWindow *settingWindow;
+@property (strong) IBOutlet NSTextField *domainTextField;
+
+
 //file stuff
 @property (strong, nonatomic) NSString *bundlePath;
 @property (strong, nonatomic) NSString *path;
@@ -35,6 +40,8 @@
 - (IBAction)startTimer:(id)sender;
 - (IBAction)stopTimer:(id)sender;
 - (IBAction)exitApp:(id)sender;
+- (IBAction)openSetting:(id)sender;
+- (IBAction)saveSetting:(id)sender;
 
 
 @end

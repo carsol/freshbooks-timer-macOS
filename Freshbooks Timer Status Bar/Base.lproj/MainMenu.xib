@@ -14,7 +14,9 @@
         <customObject id="-3" userLabel="Application"/>
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate">
             <connections>
+                <outlet property="domainTextField" destination="sn6-bf-Q8p" id="B5G-QF-fVg"/>
                 <outlet property="menu" destination="1Kq-Il-Woj" id="99Q-9p-R3X"/>
+                <outlet property="settingWindow" destination="N7B-R2-IOF" id="XA1-VJ-p2R"/>
                 <outlet property="webView" destination="VXM-em-jq4" id="vOK-fh-6wk"/>
                 <outlet property="window" destination="F2b-fh-gkl" id="UL7-2a-UO2"/>
             </connections>
@@ -26,6 +28,12 @@
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
                         <action selector="menuAction:" target="Voe-Tx-rLC" id="3Ty-wQ-vDm"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Settings" id="ZSd-aC-0KC">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="openSetting:" target="Voe-Tx-rLC" id="fbX-5q-plu"/>
                     </connections>
                 </menuItem>
                 <menuItem title="Start" id="g0R-w7-oFB">
@@ -69,6 +77,50 @@
                     </webView>
                 </subviews>
             </view>
+        </window>
+        <window title="Settings" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="N7B-R2-IOF">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" texturedBackground="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="196" y="207" width="213" height="134"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1058"/>
+            <view key="contentView" id="L8W-O0-eCc">
+                <rect key="frame" x="0.0" y="0.0" width="213" height="134"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sn6-bf-Q8p">
+                        <rect key="frame" x="32" y="61" width="148" height="22"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="gNL-40-DbN">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S30-Jd-LVo">
+                        <rect key="frame" x="30" y="97" width="152" height="17"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Set Freshbooks Domain" id="755-cv-IqI">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1uF-aH-Y7z">
+                        <rect key="frame" x="107" y="18" width="73" height="25"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="roundTextured" title="Save" bezelStyle="texturedRounded" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Y7f-O2-x8t">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="saveSetting:" target="Voe-Tx-rLC" id="qL1-Es-yxL"/>
+                        </connections>
+                    </button>
+                </subviews>
+            </view>
+            <connections>
+                <outlet property="delegate" destination="Voe-Tx-rLC" id="5qz-uw-PaO"/>
+            </connections>
         </window>
     </objects>
 </document>

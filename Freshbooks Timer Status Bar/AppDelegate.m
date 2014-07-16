@@ -35,20 +35,26 @@
     self.path = [self.bundlePath stringByAppendingPathComponent:@"data.plist"];
     self.fileManager = [NSFileManager defaultManager];
     
+    NSLog(@"path:::: %@", self.path);
+    
     
     if ([self.fileManager fileExistsAtPath: self.path])
     {
         self.userData = [[NSMutableDictionary alloc] initWithContentsOfFile: self.path];  // if file exist at path initialise your dictionary with its data
+        NSLog(@"userData:::: %@", self.userData);
     }
     else
     {
         // If the file doesn’t exist, create an empty dictionary
         self.userData = [[NSMutableDictionary alloc] init];
+        [self openSetting:nil];
+//        [self.settingWindow makeKeyAndOrderFront:nil];
     }
     
+//    self.domainTextField.stringValue = self.getDomain;
     NSLog(@"applicationDidFinishLaunching %@",self.userData);
     
-    [self saveDomain:@"sonatechinc"];
+//    [self saveDomain:@"sonatechinc"];
     
     
     NSString *url = [NSString stringWithFormat:@"https://%@.freshbooks.com/internal/timesheet/timer", self.getDomain];
@@ -126,9 +132,8 @@ decidePolicyForNavigationAction:(NSDictionary *)actionInformation request:(NSURL
 }
 
 - (void)updateStatusText:(NSString *)string {
+    NSLog(@"updateStatusText %@", string);
     self.statusItem.title = string;
-//    NSLog(@"updateStatusText %@", string);
-    
 }
 
 - (void)updateTimerFromWebView:(WebView *)sender {
@@ -146,6 +151,12 @@ decidePolicyForNavigationAction:(NSDictionary *)actionInformation request:(NSURL
 - (IBAction)menuAction:(id)sender {
     NSLog(@"menuAction:");
     [self.window makeKeyAndOrderFront:nil];
+}
+
+- (IBAction)openSetting:(id)sender{
+    NSLog(@"openSetting:");
+    [self.settingWindow makeKeyAndOrderFront:nil];
+    self.domainTextField.stringValue = self.getDomain;
 }
 
 - (IBAction)startTimer:(id)sender {
@@ -166,6 +177,16 @@ decidePolicyForNavigationAction:(NSDictionary *)actionInformation request:(NSURL
     [NSApp terminate:self];
 }
 
+
+- (IBAction)saveSetting:(id)sender {
+    NSLog(@"saveSetting %@", self.domainTextField.stringValue);
+    [self saveDomain:self.domainTextField.stringValue];
+    
+    
+    NSString *url = [NSString stringWithFormat:@"https://%@.freshbooks.com/internal/timesheet/timer", self.getDomain];
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
+	[self.webView.mainFrame loadRequest:request];
+}
 
 
 @end
