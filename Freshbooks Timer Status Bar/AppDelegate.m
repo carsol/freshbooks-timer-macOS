@@ -181,6 +181,8 @@ decidePolicyForNavigationAction:(NSDictionary *)actionInformation request:(NSURL
 - (IBAction)saveSetting:(id)sender {
     NSLog(@"saveSetting %@", self.domainTextField.stringValue);
     [self saveDomain:self.domainTextField.stringValue];
+    [self.settingWindow orderOut:self];
+    [self.window makeKeyAndOrderFront:nil];
     
     
     NSString *url = [NSString stringWithFormat:@"https://%@.freshbooks.com/internal/timesheet/timer", self.getDomain];
