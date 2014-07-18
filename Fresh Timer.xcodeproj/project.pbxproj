@@ -31,23 +31,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		07EA9FC31965C71900F8143C /* Freshbooks Timer Status Bar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Freshbooks Timer Status Bar.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		07EA9FC31965C71900F8143C /* Fresh Timer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fresh Timer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		07EA9FC61965C71900F8143C /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		07EA9FC91965C71900F8143C /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		07EA9FCA1965C71900F8143C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		07EA9FCB1965C71900F8143C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		07EA9FCE1965C71900F8143C /* Freshbooks Timer Status Bar-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Freshbooks Timer Status Bar-Info.plist"; sourceTree = "<group>"; };
+		07EA9FCE1965C71900F8143C /* Fresh Timer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Fresh Timer-Info.plist"; sourceTree = "<group>"; };
 		07EA9FD01965C71900F8143C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		07EA9FD21965C71900F8143C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		07EA9FD41965C71900F8143C /* Freshbooks Timer Status Bar-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Freshbooks Timer Status Bar-Prefix.pch"; sourceTree = "<group>"; };
+		07EA9FD41965C71900F8143C /* Fresh Timer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Fresh Timer-Prefix.pch"; sourceTree = "<group>"; };
 		07EA9FD61965C71900F8143C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		07EA9FD81965C71900F8143C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		07EA9FD91965C71900F8143C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		07EA9FDC1965C71900F8143C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		07EA9FDE1965C71900F8143C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		07EA9FE41965C71900F8143C /* Freshbooks Timer Status BarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Freshbooks Timer Status BarTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		07EA9FE41965C71900F8143C /* Fresh TimerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Fresh TimerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		07EA9FE51965C71900F8143C /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		07EA9FEC1965C71900F8143C /* Freshbooks Timer Status BarTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Freshbooks Timer Status BarTests-Info.plist"; sourceTree = "<group>"; };
+		07EA9FEC1965C71900F8143C /* Fresh TimerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Fresh TimerTests-Info.plist"; sourceTree = "<group>"; };
 		07EA9FEE1965C71900F8143C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		07EA9FF01965C71900F8143C /* Freshbooks_Timer_Status_BarTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Freshbooks_Timer_Status_BarTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -86,8 +86,8 @@
 		07EA9FC41965C71900F8143C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				07EA9FC31965C71900F8143C /* Freshbooks Timer Status Bar.app */,
-				07EA9FE41965C71900F8143C /* Freshbooks Timer Status BarTests.xctest */,
+				07EA9FC31965C71900F8143C /* Fresh Timer.app */,
+				07EA9FE41965C71900F8143C /* Fresh TimerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -127,10 +127,10 @@
 		07EA9FCD1965C71900F8143C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				07EA9FCE1965C71900F8143C /* Freshbooks Timer Status Bar-Info.plist */,
+				07EA9FCE1965C71900F8143C /* Fresh Timer-Info.plist */,
 				07EA9FCF1965C71900F8143C /* InfoPlist.strings */,
 				07EA9FD21965C71900F8143C /* main.m */,
-				07EA9FD41965C71900F8143C /* Freshbooks Timer Status Bar-Prefix.pch */,
+				07EA9FD41965C71900F8143C /* Fresh Timer-Prefix.pch */,
 				07EA9FD51965C71900F8143C /* Credits.rtf */,
 			);
 			name = "Supporting Files";
@@ -148,7 +148,7 @@
 		07EA9FEB1965C71900F8143C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				07EA9FEC1965C71900F8143C /* Freshbooks Timer Status BarTests-Info.plist */,
+				07EA9FEC1965C71900F8143C /* Fresh TimerTests-Info.plist */,
 				07EA9FED1965C71900F8143C /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -157,9 +157,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		07EA9FC21965C71900F8143C /* Freshbooks Timer Status Bar */ = {
+		07EA9FC21965C71900F8143C /* Fresh Timer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 07EA9FF41965C71900F8143C /* Build configuration list for PBXNativeTarget "Freshbooks Timer Status Bar" */;
+			buildConfigurationList = 07EA9FF41965C71900F8143C /* Build configuration list for PBXNativeTarget "Fresh Timer" */;
 			buildPhases = (
 				07EA9FBF1965C71900F8143C /* Sources */,
 				07EA9FC01965C71900F8143C /* Frameworks */,
@@ -169,14 +169,14 @@
 			);
 			dependencies = (
 			);
-			name = "Freshbooks Timer Status Bar";
+			name = "Fresh Timer";
 			productName = "Freshbooks Timer Status Bar";
-			productReference = 07EA9FC31965C71900F8143C /* Freshbooks Timer Status Bar.app */;
+			productReference = 07EA9FC31965C71900F8143C /* Fresh Timer.app */;
 			productType = "com.apple.product-type.application";
 		};
-		07EA9FE31965C71900F8143C /* Freshbooks Timer Status BarTests */ = {
+		07EA9FE31965C71900F8143C /* Fresh TimerTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 07EA9FF71965C71900F8143C /* Build configuration list for PBXNativeTarget "Freshbooks Timer Status BarTests" */;
+			buildConfigurationList = 07EA9FF71965C71900F8143C /* Build configuration list for PBXNativeTarget "Fresh TimerTests" */;
 			buildPhases = (
 				07EA9FE01965C71900F8143C /* Sources */,
 				07EA9FE11965C71900F8143C /* Frameworks */,
@@ -187,9 +187,9 @@
 			dependencies = (
 				07EA9FE91965C71900F8143C /* PBXTargetDependency */,
 			);
-			name = "Freshbooks Timer Status BarTests";
+			name = "Fresh TimerTests";
 			productName = "Freshbooks Timer Status BarTests";
-			productReference = 07EA9FE41965C71900F8143C /* Freshbooks Timer Status BarTests.xctest */;
+			productReference = 07EA9FE41965C71900F8143C /* Fresh TimerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -206,7 +206,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 07EA9FBE1965C71900F8143C /* Build configuration list for PBXProject "Freshbooks Timer Status Bar" */;
+			buildConfigurationList = 07EA9FBE1965C71900F8143C /* Build configuration list for PBXProject "Fresh Timer" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -219,8 +219,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				07EA9FC21965C71900F8143C /* Freshbooks Timer Status Bar */,
-				07EA9FE31965C71900F8143C /* Freshbooks Timer Status BarTests */,
+				07EA9FC21965C71900F8143C /* Fresh Timer */,
+				07EA9FE31965C71900F8143C /* Fresh TimerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -270,7 +270,7 @@
 /* Begin PBXTargetDependency section */
 		07EA9FE91965C71900F8143C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 07EA9FC21965C71900F8143C /* Freshbooks Timer Status Bar */;
+			target = 07EA9FC21965C71900F8143C /* Fresh Timer */;
 			targetProxy = 07EA9FE81965C71900F8143C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -387,9 +387,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Freshbooks Timer Status Bar/Freshbooks Timer Status Bar-Prefix.pch";
-				INFOPLIST_FILE = "Freshbooks Timer Status Bar/Freshbooks Timer Status Bar-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "Freshbooks Timer Status Bar/Fresh Timer-Prefix.pch";
+				INFOPLIST_FILE = "Freshbooks Timer Status Bar/Fresh Timer-Info.plist";
+				PRODUCT_NAME = "Fresh Timer";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -400,9 +400,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Freshbooks Timer Status Bar/Freshbooks Timer Status Bar-Prefix.pch";
-				INFOPLIST_FILE = "Freshbooks Timer Status Bar/Freshbooks Timer Status Bar-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "Freshbooks Timer Status Bar/Fresh Timer-Prefix.pch";
+				INFOPLIST_FILE = "Freshbooks Timer Status Bar/Fresh Timer-Info.plist";
+				PRODUCT_NAME = "Fresh Timer";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -422,8 +422,8 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "Freshbooks Timer Status BarTests/Freshbooks Timer Status BarTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "Freshbooks Timer Status BarTests/Fresh TimerTests-Info.plist";
+				PRODUCT_NAME = "Fresh TimerTests";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -440,8 +440,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Freshbooks Timer Status Bar/Freshbooks Timer Status Bar-Prefix.pch";
-				INFOPLIST_FILE = "Freshbooks Timer Status BarTests/Freshbooks Timer Status BarTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "Freshbooks Timer Status BarTests/Fresh TimerTests-Info.plist";
+				PRODUCT_NAME = "Fresh TimerTests";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -450,7 +450,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		07EA9FBE1965C71900F8143C /* Build configuration list for PBXProject "Freshbooks Timer Status Bar" */ = {
+		07EA9FBE1965C71900F8143C /* Build configuration list for PBXProject "Fresh Timer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				07EA9FF21965C71900F8143C /* Debug */,
@@ -459,21 +459,23 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		07EA9FF41965C71900F8143C /* Build configuration list for PBXNativeTarget "Freshbooks Timer Status Bar" */ = {
+		07EA9FF41965C71900F8143C /* Build configuration list for PBXNativeTarget "Fresh Timer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				07EA9FF51965C71900F8143C /* Debug */,
 				07EA9FF61965C71900F8143C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		07EA9FF71965C71900F8143C /* Build configuration list for PBXNativeTarget "Freshbooks Timer Status BarTests" */ = {
+		07EA9FF71965C71900F8143C /* Build configuration list for PBXNativeTarget "Fresh TimerTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				07EA9FF81965C71900F8143C /* Debug */,
 				07EA9FF91965C71900F8143C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

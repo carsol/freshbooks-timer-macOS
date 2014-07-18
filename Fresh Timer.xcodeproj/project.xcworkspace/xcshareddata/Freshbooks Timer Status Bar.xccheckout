@@ -5,19 +5,19 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>97EEE3B3-695F-4E12-B29A-7C53AC83B1C3</string>
+	<string>F8C06189-7C56-4F6E-BB8C-D20D87B53230</string>
 	<key>IDESourceControlProjectName</key>
 	<string>Freshbooks Timer Status Bar</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>F5A8BC83-9A54-4EE8-AAFF-E0A7B8BF97F1</key>
+		<key>FA910E18-2466-4616-9471-FBF9860D8270</key>
 		<string>https://bitbucket.org/carsol23/freshbooks-timer-status-bar.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>Freshbooks Timer Status Bar.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>F5A8BC83-9A54-4EE8-AAFF-E0A7B8BF97F1</key>
+		<key>FA910E18-2466-4616-9471-FBF9860D8270</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
@@ -25,14 +25,14 @@
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>F5A8BC83-9A54-4EE8-AAFF-E0A7B8BF97F1</string>
+	<string>FA910E18-2466-4616-9471-FBF9860D8270</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>F5A8BC83-9A54-4EE8-AAFF-E0A7B8BF97F1</string>
+			<string>FA910E18-2466-4616-9471-FBF9860D8270</string>
 			<key>IDESourceControlWCCName</key>
 			<string>Freshbooks-Timer-Status-Bar</string>
 		</dict>

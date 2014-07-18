@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "07EA9FC21965C71900F8143C"
                BuildableName = "Freshbooks Timer Status Bar.app"
-               BlueprintName = "Freshbooks Timer Status Bar"
-               ReferencedContainer = "container:Freshbooks Timer Status Bar.xcodeproj">
+               BlueprintName = "Fresh Timer"
+               ReferencedContainer = "container:Fresh Timer.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -34,8 +34,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "07EA9FE31965C71900F8143C"
                BuildableName = "Freshbooks Timer Status BarTests.xctest"
-               BlueprintName = "Freshbooks Timer Status BarTests"
-               ReferencedContainer = "container:Freshbooks Timer Status Bar.xcodeproj">
+               BlueprintName = "Fresh TimerTests"
+               ReferencedContainer = "container:Fresh Timer.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -44,8 +44,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "07EA9FC21965C71900F8143C"
             BuildableName = "Freshbooks Timer Status Bar.app"
-            BlueprintName = "Freshbooks Timer Status Bar"
-            ReferencedContainer = "container:Freshbooks Timer Status Bar.xcodeproj">
+            BlueprintName = "Fresh Timer"
+            ReferencedContainer = "container:Fresh Timer.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -63,8 +63,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "07EA9FC21965C71900F8143C"
             BuildableName = "Freshbooks Timer Status Bar.app"
-            BlueprintName = "Freshbooks Timer Status Bar"
-            ReferencedContainer = "container:Freshbooks Timer Status Bar.xcodeproj">
+            BlueprintName = "Fresh Timer"
+            ReferencedContainer = "container:Fresh Timer.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -81,8 +81,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "07EA9FC21965C71900F8143C"
             BuildableName = "Freshbooks Timer Status Bar.app"
-            BlueprintName = "Freshbooks Timer Status Bar"
-            ReferencedContainer = "container:Freshbooks Timer Status Bar.xcodeproj">
+            BlueprintName = "Fresh Timer"
+            ReferencedContainer = "container:Fresh Timer.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
